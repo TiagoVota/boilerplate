@@ -23,19 +23,30 @@ const GlobalStyle = createGlobalStyle`
 	button {
 		color: #FFFFFF;
 		background-color: #A328D6;
+		opacity: ${p => p.isDisable ? 0.7 : 1};
+
+		cursor: ${p => p.isDisable ? 'none' : 'pointer'};
+
+		:hover {
+			filter: brightness(90%);
+		}
 	}
 
 	input {
-	color: #000000;
+		color: #000000;
 
-	::placeholder {
-		color: #575757;
-	}
+		background-color: ${p => p.isDisable ? '#F2F2F2' : '#FFFFFF'};
 
-	:focus {
-		color: #8C11BE;
-		outline: none;
-	}
+		pointer-events: ${p => p.isDisable ? 'none' : 'all'};
+
+		::placeholder {
+			color: #575757;
+		}
+
+		:focus {
+			color: #8C11BE;
+			outline: none;
+		}
 	}
 
 	a {
