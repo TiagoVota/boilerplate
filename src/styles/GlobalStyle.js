@@ -22,10 +22,10 @@ const GlobalStyle = createGlobalStyle`
 
 	button {
 		color: #FFFFFF;
-		background-color: #A328D6;
+		background-color: #1877F2;
 		opacity: ${p => p.isDisable ? 0.7 : 1};
 
-		cursor: ${p => p.isDisable ? 'none' : 'pointer'};
+		cursor: ${p => p.isDisable ? 'wait' : 'pointer'};
 
 		:hover {
 			filter: brightness(90%);
@@ -44,17 +44,23 @@ const GlobalStyle = createGlobalStyle`
 		}
 
 		:focus {
-			color: #8C11BE;
+			color: #1877F2;
 			outline: none;
 		}
 	}
 
 	a {
 		text-decoration: none;
+
+		* {
+			:hover {
+				color: #1877F2;
+			}
+		}
 	}
 
 	strong {
-		font-weight: bold;
+		font-weight: 700;
 	}
 `
 
