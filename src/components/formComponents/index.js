@@ -1,19 +1,8 @@
 import styled from 'styled-components'
+
 import { Link } from 'react-router-dom'
 
-const Container = styled.div`
-	width: 100vw;
-	height: 100vh;
-	
-	background-color: #333333;
-	
-	display: flex;
 
-	@media(max-width: 650px){
-		flex-direction: column;
-	}
-
-`
 const FormContainer = styled.div`
 	width: 40%;
 
@@ -21,6 +10,7 @@ const FormContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+
 	gap: 15px;
 
 	@media(max-width: 650px) {
@@ -34,6 +24,7 @@ const Form = styled.form`
 
 	display: flex;
 	flex-direction: column;
+
 	gap: 13px;
 `
 
@@ -47,10 +38,6 @@ const Input = styled.input`
 
 	border-radius: 5px;
 	border-width: 0px;
-
-	background-color: ${p => p.isDisable ? '#BABABA' : '#FFFFFF'};
-	${p => p.isDisable && 'pointer-events: none;'}
-
 `
 
 const Button = styled.button`
@@ -60,37 +47,26 @@ const Button = styled.button`
 	border-radius: 5px;
 	background: #1877F2;
 	
-	font-weight: 700;
 	font-family: 'Oswald', sans-serif;
-	font-weight: 700;
+	font-weight: bold;
 	font-size: 22px;
 	line-height: 33px;
-
-	opacity: ${p => p.isDisable ? 0.7 : 1};
-
-	${p => p.isDisable && 'pointer-events: none;'}
-	cursor: ${p => p.isDisable ? 'not-allowed' : 'pointer'};
 `
 
 const RedirectLink = styled(Link)`
 	font-family: 'Lato', sans-serif;
-	font-weight: 400;
 	font-size: 17px;
 	line-height: 20px;
 	text-decoration-line: underline;
 
 	color: #FFFFFF;
-
-	:hover {
-		color: #1877F2;
-	}
 `
+
 
 export {
 	Button,
-	Container,
 	Form,
 	FormContainer,
 	Input,
-	RedirectLink
+	RedirectLink,
 } 

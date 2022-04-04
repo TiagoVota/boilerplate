@@ -1,18 +1,6 @@
 import styled from 'styled-components'
 
 
-const Logo = () => {
-	return (
-		<Title>
-			Boilerplate
-		</Title>
-	)
-}
-
-
-export default Logo
-
-
 const Title = styled.h1`
 	font-family: 'Saira Stencil One', sans-serif;
 
@@ -21,3 +9,8 @@ const Title = styled.h1`
 	
 	color: #FFFFFF;
 `
+
+
+export {
+	Title,
+}
